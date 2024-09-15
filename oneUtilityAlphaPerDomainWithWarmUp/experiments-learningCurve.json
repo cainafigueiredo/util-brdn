@@ -1,0 +1,719 @@
+[
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/imdb",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/cora",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": false,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0.3,
+        "targetUtilityAlpha": 1,
+        "utilityAlphaSetIter": 3,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "workedunder": "samevenue",
+                "female": null,
+                "actor": null,
+                "director": null,
+                "movie": null,
+                "genre": "haswordvenue"
+            },
+            "termTypeMapping": {
+                "person": "venue",
+                "genre": "word"
+            }
+        },
+        "id": "bd52831309ada286d62e64cf24e949319f73c548fd60103f5c595d2a3b80e1c2"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/cora",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/imdb",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": false,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 1,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "venue": "workedunder",
+                "sameauthor": null,
+                "samebib": null,
+                "sametitle": null,
+                "samevenue": null,
+                "author": null,
+                "title": "genre",
+                "haswordauthor": null,
+                "haswordtitle": null,
+                "haswordvenue": null
+            },
+            "termTypeMapping": {
+                "class": "person",
+                "venue": "person",
+                "title": "genre"
+            }
+        },
+        "id": "396a63c068864d171cb3eeb5c9340cea81e4e0ce00592bd492485edfba59c5ff"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/imdb",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/uwcse",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": false,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 1,
+        "targetUtilityAlpha": 0.6,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "movie": "advisedby",
+                "workedunder": null,
+                "female": "student",
+                "actor": null,
+                "director": "professor",
+                "genre": "yearsinprogram"
+            },
+            "termTypeMapping": {
+                "movie": "person",
+                "person": "person",
+                "genre": "year"
+            }
+        },
+        "id": "f3ae43b9215c2493380521cec736ff40fe7b9e98a9e093af156ec3ca880807cc"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/twitter",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/yeast",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 0.6,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "accounttype": "proteinclass",
+                "recursion_accounttype": "recursion_proteinclass",
+                "tweets": "phenotype",
+                "follows": "interaction"
+            },
+            "termTypeMapping": {
+                "account": "protein",
+                "type": "class",
+                "word": "phe"
+            }
+        },
+        "id": "6686ac04ddaf3e507af9c6b94b8f868e37c2d1a12fdccecaa8770b8892934d76"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/yeast",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/twitter",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 1.3,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "function": "accounttype",
+                "recursion_function": "recursion_accounttype",
+                "location": "tweets",
+                "interaction": null,
+                "proteinclass": null,
+                "enzyme": "follows",
+                "complex": null,
+                "phenotype": null
+            },
+            "termTypeMapping": {
+                "protein": "account",
+                "fun": "type",
+                "loc": "word",
+                "enz": "account"
+            }
+        },
+        "id": "b45ead65a1670ade43e08d3f429838d56e21dd723ebd05a0db46df3323738b3e"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/nell_sports",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/nell_finances",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 1.3,
+        "utilityAlphaSetIter": 7,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "teamplaysinleague": "companyeconomicsector",
+                "recursion_teamplaysinleague": "recursion_companyeconomicsector",
+                "athleteledsportsteam": null,
+                "athleteplaysforteam": "acquired",
+                "athleteplaysinleague": null,
+                "athleteplayssport": "companyceo",
+                "teamalsoknownas": "bankboughtbank",
+                "teamplaysagainstteam": "companyalsoknownas",
+                "teamplayssport": null
+            },
+            "termTypeMapping": {
+                "sportsteam": "company",
+                "sportsleague": "sector",
+                "athlete": "company",
+                "sport": "person"
+            }
+        },
+        "id": "9d42911e8115f7e1f34b8333583d28b0bef5ccc46bcff5a7ba664af957adef29"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/nell_finances",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/nell_sports",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 1.3,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 5,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "companyceo": "teamplayssport",
+                "recursion_companyceo": "recursion_teamplayssport",
+                "countryhascompanyoffice": "teamalsoknownas",
+                "companyeconomicsector": "teamplaysagainstteam",
+                "economicsectorcompany": null,
+                "companyalsoknownas": null,
+                "cityhascompanyoffice": "athleteplaysforteam",
+                "acquired": null,
+                "bankbankincountry": null,
+                "bankboughtbank": null,
+                "bankchiefexecutiveceo": null
+            },
+            "termTypeMapping": {
+                "company": "sportsteam",
+                "person": "sport",
+                "country": "sportsteam",
+                "sector": "sportsteam",
+                "city": "athlete"
+            }
+        },
+        "id": "54ab7a686188f35592556347bf5251921a8ade4adb0ab22b7bcc078c9800b684"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/imdb",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/cora",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": false,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 0.6,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "genre": "samevenue",
+                "workedunder": null,
+                "female": null,
+                "actor": null,
+                "director": null,
+                "movie": null
+            },
+            "termTypeMapping": {
+                "person": "venue",
+                "genre": "venue"
+            }
+        },
+        "id": "8f1f2f42ac13df76c11fdd4fc2012f1a02d64609e64fa0258d1e34c50a28301a"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/cora",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/imdb",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": false,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0.6,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 5,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "title": "workedunder",
+                "sameauthor": null,
+                "samebib": null,
+                "sametitle": null,
+                "samevenue": null,
+                "author": null,
+                "venue": null,
+                "haswordauthor": "movie",
+                "haswordtitle": null,
+                "haswordvenue": null
+            },
+            "termTypeMapping": {
+                "class": "person",
+                "title": "person",
+                "author": "movie",
+                "word": "person"
+            }
+        },
+        "id": "51f933537100240bacb4f7a6341c4f77a9b233a4e493d5938c556dd990ddb4f1"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/imdb",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/uwcse",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": false,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "workedunder": "advisedby",
+                "female": null,
+                "actor": null,
+                "director": null,
+                "movie": "tempadvisedby",
+                "genre": "hasposition"
+            },
+            "termTypeMapping": {
+                "person": "person",
+                "movie": "person",
+                "genre": "faculty"
+            }
+        },
+        "id": "ed84223eca8dea790d61b5ebed802d1bb652cf449866cd8d00740f4e6423c7fb"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/twitter",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/yeast",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0.3,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "accounttype": "proteinclass",
+                "recursion_accounttype": "recursion_proteinclass",
+                "tweets": "enzyme",
+                "follows": "interaction"
+            },
+            "termTypeMapping": {
+                "account": "protein",
+                "type": "class",
+                "word": "enz"
+            }
+        },
+        "id": "1083b5b58bc7c476d69917dc5a42cc31fdbc6910b4a51102867b0c71be10da74"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/yeast",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/twitter",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 1.3,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "location": "accounttype",
+                "recursion_location": "recursion_accounttype",
+                "interaction": null,
+                "proteinclass": "follows",
+                "enzyme": null,
+                "function": "tweets",
+                "complex": null,
+                "phenotype": null
+            },
+            "termTypeMapping": {
+                "protein": "account",
+                "loc": "type",
+                "class": "account",
+                "fun": "word"
+            }
+        },
+        "id": "82685ff50ecd1e70faeec5f45a5feb4702b3d939876d71d7f9de55684df757ed"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/nell_sports",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/nell_finances",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 0,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 3,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "teamplaysinleague": "companyeconomicsector",
+                "recursion_teamplaysinleague": "recursion_companyeconomicsector",
+                "athleteledsportsteam": null,
+                "athleteplaysforteam": "acquired",
+                "athleteplaysinleague": null,
+                "athleteplayssport": "companyceo",
+                "teamalsoknownas": "bankboughtbank",
+                "teamplaysagainstteam": "companyalsoknownas",
+                "teamplayssport": null
+            },
+            "termTypeMapping": {
+                "sportsteam": "company",
+                "sportsleague": "sector",
+                "athlete": "company",
+                "sport": "person"
+            }
+        },
+        "id": "81cb6ed097c877693916a86800636138255b05b772fdcd024958faa184cd04e5"
+    },
+    {
+        "path": "./experiments/learningCurve",
+        "randomSeed": 11,
+        "numberOfClauses": 8,
+        "numberOfCycles": 100,
+        "maxTreeDepth": 3,
+        "nEstimators": 10,
+        "nodeSize": 2,
+        "negPosRatio": 2,
+        "maxFailedNegSamplingRetries": 50,
+        "ignoreSTDOUT": true,
+        "sourceDatabase": {
+            "path": "../data/preprocessed/nell_finances",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "targetDatabase": {
+            "path": "../data/preprocessed/nell_sports",
+            "targetPredicate": null,
+            "resetTargetPredicate": false
+        },
+        "useRecursion": true,
+        "runTransferLearning": true,
+        "sourceUtilityAlpha": 1.3,
+        "targetUtilityAlpha": 0,
+        "utilityAlphaSetIter": 1,
+        "weight": {
+            "strategy": "scalar",
+            "parameters": {
+                "weight": 1
+            }
+        },
+        "mapping": {
+            "relationMapping": {
+                "bankbankincountry": "teamplayssport",
+                "recursion_bankbankincountry": "recursion_teamplayssport",
+                "countryhascompanyoffice": null,
+                "companyeconomicsector": null,
+                "economicsectorcompany": "athleteplaysforteam",
+                "companyceo": "teamalsoknownas",
+                "companyalsoknownas": "teamplaysagainstteam",
+                "cityhascompanyoffice": "athleteledsportsteam",
+                "acquired": null,
+                "bankboughtbank": null,
+                "bankchiefexecutiveceo": null
+            },
+            "termTypeMapping": {
+                "person": "sportsteam",
+                "country": "sport",
+                "sector": "athlete",
+                "company": "sportsteam",
+                "city": "athlete"
+            }
+        },
+        "id": "a375d163f0e4c861940f9cbcceb0c5254eaa606a9d38144abce4a493d700af92"
+    }
+]
