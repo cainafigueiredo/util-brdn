@@ -68,7 +68,7 @@ For complete details about the experiments and results, check out the full repor
 ## **🤝 Contributing**
 We welcome contributions to improve UTIL-BRDN! Here are a few ways you can help:
 
-- **Code Refactoring:** Help reorganize the codebase of this repository, as well as its dependencies, such as our modified version of [BoostSRL](https://github.com/cainafigueiredo/UtilityMultiDomainRDNBoost) and [srlearn](https://github.com/cainafigueiredo/srlearn). The srlearn repository, in particular, needs to be packaged properly to ensure smooth installation and usage.
+- **Code Refactoring:** Help reorganize the codebase of this repository, as well as its dependencies, such as our modified version of [BoostSRL](https://github.com/cainafigueiredo/UtilityMultiDomainRDNBoost) and [srlearn](https://github.com/cainafigueiredo/srlearn/tree/instanceLevelUtility). The srlearn repository, in particular, needs to be packaged properly to ensure smooth installation and usage.
 
 - **Documentation Enhancements:** Contributions that improve the clarity, comprehensiveness, and structure of the documentation are greatly appreciated. This includes code comments, user guides, and examples.
 
