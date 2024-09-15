@@ -1,0 +1,7 @@
+.vscode
+__pycache__
+img
+ignore
+oneUtilityAlphaPerDomainWithWarmUp/experiments
+oneUtilityAlphaPerDomainWithWarmUp/compressedFolds.tar.gz
+oneUtilityAlphaPerDomainWithWarmUp/compressExperimentsData.ipynb

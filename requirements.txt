@@ -1,0 +1,6 @@
+graphviz
+numpy
+networkx
+tqdm
+graphviz
+scikit-learn
